@@ -1,0 +1,50 @@
+Chunk's Challenge Level Format
+------------------------------
+
+Four bytes:
+	1st byte: level width (must be >=10)
+	2nd byte: level height (must be >=10)
+	3rd byte: length of name
+	4th byte: length of password
+
+Name in bytes, until the specified length is read
+
+Password in bytes, until the specified length is read
+
+One byte representing the length of the hint
+
+Hint in bytes, until the specified length is read
+
+Tiles in bytes, until width*height is reached.
+These are read and written in columns.
+	File: (for a 3x4 board)
+	0 1 2 3 4 5 6 7 8 9 10 11
+
+	Board:
+	0 4 8
+	1 5 9  etc...
+	2 6 10
+	3 7 11
+
+One integer is the endian marker.
+This should be 0x12345678.
+
+Attributes are read until the end marker (0xFFFFFFFF).
+They are written in this way:
+	One integer containing the tile:
+		first 2 bytes: x
+		second 2 bytes: y
+	One integer containing the attribute value.
+
+	Example:
+	0x0001 0001 0xF34D0012
+
+	Board:
+	0 0 0
+	0 A 0 ("A" spot (1,1) has attrib. 0xF34D0012)
+	0 0 0
+
+Finally, there is one integer containing the following:
+	( nr_of_chords shl 16 ) or nr_of_notes
+
+One short containing level's time.

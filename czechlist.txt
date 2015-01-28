@@ -1,0 +1,21 @@
+	Chunk's Challenge Czechlist / todo-list
+		(in no particular order)
+
+[x] - Move bad guys to blockboard
+[ ] - Make bad guys move (incl. blocks on force floors and ice)
+[ ] - Fix typing hints (wrap to next line)
+[x] - Allow blocks on one-way wall tiles
+[x] - Make trap and clone connections work in cclevels
+[x] - Show information in ccplaya
+[x] - Make level timer work
+[x] - Make Chunk die when he's supposed to
+[x] - Make levels save nr of chords and notes
+[x] - Allow blocks on ice and force floors (not random ones though)
+[x] - Treat dir-changing ice tiles as walls at the dir-changer
+[x] - Make teleporters work
+[x] - Make clones and traps work
+[ ] - Make level packer/unpacker tool - this is a fairly big project in itself and will probably use zlib or similar.
+[x] - Make you be able to beat levels
+[x] - Make you be able to open levels
+[x] - Make pause work
+[ ] - Add level hints
