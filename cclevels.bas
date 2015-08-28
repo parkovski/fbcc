@@ -56,7 +56,7 @@ tiles = allocate(sizeof(any ptr ptr) * 8)
 
 dprt(4)
 
-tiles[0] = allocate(sizeof(any ptr) * (12 + 1))
+tiles[0] = allocate(sizeof(any ptr) * (13 + 1))
 tiles[0][0] = floor
 tiles[0][1] = wall
 tiles[0][2] = redfloor
@@ -73,7 +73,6 @@ tiles[0][12] = popupwall
 tiles[0][13] = 0
 
 dprt(5)
-'' The next allocate statement, for some reason, gives an error on Linux.
 
 tiles[1] = allocate(sizeof(any ptr) * (6 + 1))
 tiles[1][0] = eater
@@ -159,7 +158,7 @@ tiles[5][7] = 0
 
 dprt(10)
 
-tiles[6] = allocate(sizeof(any ptr) * (5 + 1))
+tiles[6] = allocate(sizeof(any ptr) * (6 + 1))
 tiles[6][0] = fireboot
 tiles[6][1] = waterboot
 tiles[6][2] = iceboot
